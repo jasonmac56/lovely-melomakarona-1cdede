@@ -53,20 +53,20 @@
     background-image:repeating-linear-gradient(45deg,transparent,transparent 7px,rgba(0,0,0,.2) 7px,rgba(0,0,0,.2) 8px),var(--accent)}
   .brand .nm{display:flex;flex-direction:column}
   .brand .nm small{font-family:var(--mono);font-size:9px;color:var(--muted);letter-spacing:2px;text-transform:uppercase;font-weight:400;margin-top:2px}
-  .tabs{display:flex;gap:4px;flex-wrap:wrap}
-  .tab{font-family:var(--body);font-weight:600;font-size:13px;letter-spacing:.3px;color:var(--muted);background:none;border:none;cursor:pointer;padding:9px 13px;border-radius:9px;transition:.18s;text-transform:uppercase}
-  .tab:hover{color:var(--text);background:var(--surface)}
-  .tab.active{color:#0b0d0c;background:var(--accent)}
+  .tabs{display:flex;gap:6px;flex-wrap:wrap}
+  .tab{font-family:var(--body);font-weight:700;font-size:13px;letter-spacing:.5px;color:#d4d8d2;background:rgba(255,255,255,.04);border:1px solid var(--line);cursor:pointer;padding:10px 15px;border-radius:10px;transition:.18s;text-transform:uppercase}
+  .tab:hover{color:var(--text);background:var(--surface);border-color:var(--line-strong)}
+  .tab.active{color:#0b0d0c;background:var(--accent);border-color:var(--accent);box-shadow:0 4px 14px rgba(201,169,97,.32)}
   .tab.cta{color:var(--accent);box-shadow:inset 0 0 0 1px var(--accent)}
   .tab.cta:hover{background:rgba(201,169,97,.1)}
   .tab.cta.active{color:#0b0d0c;background:var(--accent);box-shadow:none}
 
   /* hero — punched up */
   .hero{padding:54px 0 36px;text-align:center}
-  .eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--accent);margin-bottom:18px}
+  .eyebrow{font-family:var(--mono);font-size:14px;letter-spacing:4px;text-transform:uppercase;color:var(--accent);margin-bottom:22px}
   .hero h1{font-family:var(--display);font-weight:400;line-height:.9;font-size:clamp(46px,9vw,96px);letter-spacing:1px;text-transform:uppercase}
-  .hero h1 .alt{color:transparent;-webkit-text-stroke:2.5px rgba(232,205,135,.55);display:block;text-shadow:0 0 30px rgba(201,169,97,.18)}
-  .hero .tagline{font-size:18px;color:var(--accent-2);margin-top:18px;font-weight:600;letter-spacing:.5px}
+  .hero h1 .alt{color:transparent;-webkit-text-stroke:3px rgba(232,205,135,.85);display:block;text-shadow:0 0 30px rgba(201,169,97,.25)}
+  .hero .tagline{font-size:clamp(20px,2.6vw,26px);color:var(--accent-2);margin-top:22px;font-weight:600;letter-spacing:.5px;line-height:1.25}
 
   /* urgency strip — NEW */
   .urgency{display:inline-flex;align-items:center;gap:14px;margin-top:24px;padding:10px 18px;background:rgba(255,61,61,.08);border:1px solid rgba(255,61,61,.3);border-radius:999px;font-family:var(--mono);font-size:12px;letter-spacing:1.5px;text-transform:uppercase;color:#ffb8b8}
@@ -77,7 +77,7 @@
 
   .price-line{font-family:var(--display);font-size:clamp(22px,3.5vw,30px);margin:24px 0 6px;letter-spacing:.5px}
   .price-line b{color:var(--accent)}
-  .price-sub{color:var(--muted);font-size:14px;font-family:var(--mono);letter-spacing:1px}
+  .price-sub{color:#b5bcb6;font-size:16px;font-family:var(--mono);letter-spacing:1.5px}
 
   .big-cta{display:inline-block;background:var(--accent);color:#0b0d0c;font-family:var(--display);font-size:26px;letter-spacing:1.5px;text-transform:uppercase;padding:20px 54px;border:none;border-radius:13px;cursor:pointer;margin-top:30px;transition:.2s;position:relative;overflow:hidden;box-shadow:0 6px 22px rgba(201,169,97,.22)}
   .big-cta:hover{transform:translateY(-3px);box-shadow:0 18px 38px rgba(201,169,97,.45)}
@@ -89,7 +89,7 @@
   @keyframes flicker{0%,100%{opacity:1}50%{opacity:.7}}
 
   /* How It Works — 3-step section */
-  .how-it-works{margin:30px 0 50px;border:1px solid var(--line);border-radius:20px;padding:44px 36px;background:linear-gradient(135deg,var(--surface),var(--surface-2))}
+  .how-it-works{margin:0;border:1px solid var(--line);border-radius:20px;padding:44px 36px;background:linear-gradient(135deg,var(--surface),var(--surface-2))}
   .how-it-works .head{text-align:center;margin-bottom:32px}
   .how-it-works .sub{font-family:var(--mono);font-size:11px;letter-spacing:3px;color:var(--accent);text-transform:uppercase;margin-bottom:8px}
   .how-it-works h2{font-family:var(--display);font-size:clamp(28px,5vw,42px);text-transform:uppercase;letter-spacing:1px}
@@ -107,15 +107,15 @@
   }
   @keyframes sheen{0%{transform:translateX(-100%)}40%,100%{transform:translateX(100%)}}
 
-  .hero-contact{margin-top:18px;font-family:var(--mono);font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted)}
+  .hero-contact{margin-top:22px;font-family:var(--mono);font-size:13px;letter-spacing:1.5px;text-transform:uppercase;color:#b5bcb6}
   .hero-contact a{color:var(--muted);text-decoration:none;transition:.15s}
   .hero-contact a:hover{color:var(--accent)}
 
-  .hero-meta{display:flex;justify-content:center;flex-wrap:wrap;gap:24px;margin-top:30px;font-family:var(--mono);font-size:12px;color:var(--muted);letter-spacing:1px}
+  .hero-meta{display:flex;justify-content:center;flex-wrap:wrap;gap:24px;margin-top:34px;font-family:var(--mono);font-size:14px;color:#b5bcb6;letter-spacing:1px}
   .hero-meta b{color:var(--text);font-family:var(--body);font-weight:600}
 
   /* sub-tagline under main tagline */
-  .hero .tagline small{display:block;font-size:13px;color:var(--muted);font-weight:400;letter-spacing:.5px;margin-top:6px;font-style:normal}
+  .hero .tagline small{display:block;font-size:15px;color:#a8b0a8;font-weight:400;letter-spacing:.5px;margin-top:8px;font-style:normal}
 
   /* Calling all hoopers strip — sits between hero and mission */
   .hero-call-strip{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:rgba(200,255,46,.04);padding:22px 0;text-align:center;font-family:var(--display);font-size:clamp(15px,2.8vw,22px);letter-spacing:1.5px;text-transform:uppercase;color:var(--accent-2);line-height:1.35;position:relative;z-index:2}
@@ -146,8 +146,8 @@
   .info-blocks{display:grid;gap:14px}
   .info-block{border:1px solid var(--line);border-radius:18px;padding:28px;background:var(--surface);transition:.2s}
   .info-block:hover{border-color:var(--line-strong)}
-  .info-block .sub{font-family:var(--mono);font-size:11px;letter-spacing:2px;color:var(--muted);text-transform:uppercase;margin-bottom:8px}
-  .info-block h3{font-family:var(--display);font-size:24px;text-transform:uppercase;letter-spacing:.5px;margin-bottom:14px;color:var(--text);line-height:1.05}
+  .info-block .sub{font-family:var(--mono);font-size:13px;letter-spacing:2.5px;color:var(--accent);text-transform:uppercase;margin-bottom:12px}
+  .info-block h3{font-family:var(--display);font-size:clamp(26px,3.4vw,32px);text-transform:uppercase;letter-spacing:.5px;margin-bottom:18px;color:var(--text);line-height:1.05}
   .info-block p{color:#d8ddd6;font-size:14px;line-height:1.75;margin-bottom:12px}
   .info-block p:last-child{margin-bottom:0}
   .info-block ul{list-style:none;padding:0;margin-top:10px}
@@ -186,6 +186,11 @@
   .spots-bar i{display:block;height:100%;background:var(--accent);border-radius:3px;transition:width .8s ease}
   .spots-foot{font-family:var(--mono);font-size:11px;letter-spacing:1px;color:var(--muted);line-height:1.6}
 
+  /* Live waitlist row inside the spots card */
+  .waitlist-row{margin-top:16px;padding-top:14px;border-top:1px solid var(--line);font-family:var(--mono);font-size:12px;letter-spacing:1.5px;text-transform:uppercase;color:#b5bcb6;display:flex;align-items:center;justify-content:center;gap:10px}
+  .waitlist-row .wl-dot{width:8px;height:8px;border-radius:50%;background:#ff8a26;animation:pulse 1.6s ease-in-out infinite;box-shadow:0 0 10px rgba(255,138,38,.7)}
+  .waitlist-row b{color:#ff8a26;font-family:var(--display);font-size:16px;letter-spacing:.5px}
+
   .tryout-info{border:1px solid var(--line);border-radius:18px;padding:28px;background:var(--surface)}
   .tryout-info h3{font-family:var(--display);font-size:30px;text-transform:uppercase;margin-bottom:14px;line-height:1.05;letter-spacing:.5px}
   .info-row{display:flex;gap:14px;align-items:flex-start;padding:11px 0;border-bottom:1px solid var(--line);font-size:14px}
@@ -206,6 +211,32 @@
   .field input,.field select,.field textarea{font-family:var(--body);font-size:14px;color:var(--text);background:var(--bg);border:1px solid var(--line);border-radius:9px;padding:11px 13px;transition:.15s;width:100%}
   .field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--accent)}
   .field input::placeholder{color:#555}
+
+  /* ==========================================================
+     Buddy pack registration selector
+     ========================================================== */
+  .buddy-card{background:linear-gradient(135deg,rgba(201,169,97,.06),rgba(201,169,97,.02));border:1px solid rgba(201,169,97,.28);border-radius:14px;padding:22px;margin-bottom:24px}
+  .buddy-head{font-family:var(--mono);font-size:12px;letter-spacing:2px;color:var(--accent);text-transform:uppercase;margin-bottom:14px}
+  .buddy-options{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:0}
+  @media(max-width:560px){.buddy-options{grid-template-columns:1fr}}
+  .buddy-opt{position:relative;display:block;border:1.5px solid var(--line);border-radius:11px;padding:14px 16px;cursor:pointer;transition:.18s;background:var(--bg)}
+  .buddy-opt:hover{border-color:var(--line-strong)}
+  .buddy-opt input{position:absolute;opacity:0;pointer-events:none}
+  .buddy-opt:has(input:checked){border-color:var(--accent);background:rgba(201,169,97,.08);box-shadow:0 0 0 1px var(--accent)}
+  .opt-title{font-family:var(--body);font-weight:700;font-size:15px;color:var(--text);display:block}
+  .opt-sub{font-family:var(--mono);font-size:11px;letter-spacing:.5px;color:var(--muted);display:block;margin-top:5px;text-transform:none;line-height:1.4}
+  .buddy-opt:has(input:checked) .opt-title{color:var(--accent)}
+  .buddy-details{display:none;margin-top:20px;padding-top:20px;border-top:1px solid var(--line)}
+  .buddy-details.show{display:block}
+  .buddy-role{display:none;margin-top:16px}
+  .buddy-role.show{display:block}
+  .buddy-note{font-family:var(--mono);font-size:11px;letter-spacing:.5px;color:var(--muted);margin-top:12px;line-height:1.7;padding:12px 14px;background:rgba(255,255,255,.02);border-left:2px solid var(--accent);border-radius:0 6px 6px 0}
+  .captain-cta{margin-top:18px;padding:18px;background:linear-gradient(135deg,rgba(201,169,97,.14),rgba(201,169,97,.04));border:1px solid var(--accent);border-radius:12px;text-align:center}
+  .captain-cta .head{font-family:var(--mono);font-size:11px;letter-spacing:2px;color:var(--accent);text-transform:uppercase;margin-bottom:6px}
+  .captain-cta .title{font-family:var(--display);font-size:20px;color:var(--text);margin-bottom:10px;letter-spacing:.5px;text-transform:uppercase}
+  .captain-cta .note{font-family:var(--mono);font-size:11px;color:var(--muted);margin-bottom:14px;letter-spacing:.5px;line-height:1.5}
+  .captain-cta button{font-family:var(--display);font-size:15px;letter-spacing:1px;text-transform:uppercase;background:var(--accent);color:#0b0d0c;border:none;border-radius:10px;padding:12px 24px;cursor:pointer;transition:.15s}
+  .captain-cta button:hover{transform:translateY(-2px);box-shadow:0 6px 18px rgba(201,169,97,.32)}
   .field select option{background:var(--bg)}
 
   .skill-pills{display:flex;gap:10px;flex-wrap:wrap}
@@ -294,7 +325,7 @@
   @media(max-width:680px){
     .nav-inner{flex-direction:column;height:auto;padding:12px 0;gap:8px}
     .tabs{justify-content:center}
-    .tab{padding:8px 11px;font-size:11px}
+    .tab{padding:9px 13px;font-size:12px;letter-spacing:.3px}
     .contact-strip .wrap{justify-content:center;gap:14px}
     .hero{padding:36px 0 24px}
     .urgency{font-size:11px;gap:10px;padding:9px 14px}
@@ -315,30 +346,28 @@
     content:"";position:absolute;inset:0;z-index:-2;
     background-image: var(--hero-photo);
     background-size:cover;background-position:center 60%;
-    filter:saturate(.85) brightness(.55);
+    filter:saturate(1) brightness(.72);
   }
   .hero::after{
     content:"";position:absolute;inset:0;z-index:-1;
     background:
       radial-gradient(900px 500px at 50% 100%, rgba(255,255,255,.04), transparent 70%),
-      linear-gradient(180deg, rgba(11,13,12,.85) 0%, rgba(11,13,12,.6) 35%, rgba(11,13,12,.92) 100%);
+      linear-gradient(180deg, rgba(11,13,12,.55) 0%, rgba(11,13,12,.32) 38%, rgba(11,13,12,.78) 100%);
   }
   .hero .wrap{position:relative;z-index:2}
 
   /* ==========================================================
      NEW: 8-teams callout in hero meta
      ========================================================== */
-  .hero-callout{display:inline-flex;align-items:center;gap:8px;margin-top:18px;padding:6px 14px;border:1px solid rgba(200,255,46,.3);border-radius:999px;font-family:var(--mono);font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--accent-2)}
-  .hero-callout b{font-family:var(--display);color:var(--accent-2);letter-spacing:.5px;font-size:13px}
+  .hero-callout{display:inline-flex;align-items:center;gap:8px;margin-top:22px;padding:8px 18px;border:1.5px solid rgba(255,138,38,.55);background:rgba(255,138,38,.08);border-radius:999px;font-family:var(--mono);font-size:13px;letter-spacing:2px;text-transform:uppercase;color:#ff8a26;box-shadow:0 0 24px rgba(255,138,38,.18)}
+  .hero-callout b{font-family:var(--display);color:#ffb066;letter-spacing:.5px;font-size:15px}
 
   /* ==========================================================
      UPDATE: tone down Try Out tab now that it's not default
      ========================================================== */
-  .tab.cta-soft{position:relative;color:var(--accent)}
-  .tab.cta-soft::after{content:"";position:absolute;right:6px;top:50%;transform:translateY(-50%);width:6px;height:6px;border-radius:50%;background:var(--accent);box-shadow:0 0 8px var(--accent)}
-  .tab.cta-soft:hover{background:rgba(201,169,97,.08)}
-  .tab.cta-soft.active{color:#0b0d0c;background:var(--accent)}
-  .tab.cta-soft.active::after{background:#0b0d0c;box-shadow:none}
+  .tab.cta-soft{position:relative;color:#0b0d0c;background:var(--accent);border-color:var(--accent);font-weight:800;padding-right:24px;box-shadow:0 4px 14px rgba(201,169,97,.32)}
+  .tab.cta-soft::after{content:"";position:absolute;right:9px;top:50%;transform:translateY(-50%);width:7px;height:7px;border-radius:50%;background:#ff3d3d;box-shadow:0 0 10px rgba(255,61,61,.7);animation:pulse 1.4s ease-in-out infinite}
+  .tab.cta-soft:hover{background:#d6b56e;border-color:#d6b56e}
 
   /* ==========================================================
      NEW: WHY tab — heritage blocks + Hughes tribute
@@ -454,7 +483,7 @@
       <button class="tab" data-tab="fixtures">Games</button>
       <button class="tab" data-tab="teams">Teams</button>
       <button class="tab" data-tab="stats">Stats</button>
-      <button class="tab cta-soft" data-tab="tryouts">Try Out</button>
+      <button class="tab cta-soft" data-tab="tryouts">Tryout / Reg Form</button>
     </nav>
   </div>
 </header>
@@ -501,30 +530,7 @@
   </div>
 </div>
 
-<!-- HOW IT WORKS -->
-<div class="wrap"><div class="how-it-works">
-  <div class="head">
-    <div class="sub">— From the gym to the bracket —</div>
-    <h2>How It Works</h2>
-  </div>
-  <div class="steps">
-    <div class="step">
-      <div class="step-num">1</div>
-      <h3>Try Out</h3>
-      <p>Pay your <b>$10</b> and lock your tryout spot. Show up June 27 at Chisholm Trail, ball with the rest of the pool, get your game on tape.</p>
-    </div>
-    <div class="step">
-      <div class="step-num">2</div>
-      <h3>Get Drafted</h3>
-      <p>Top performers earn spots on one of <b>8 teams</b>. Balanced draft by league organizers — no stacked rosters. Captains pick names and jerseys.</p>
-    </div>
-    <div class="step">
-      <div class="step-num">3</div>
-      <h3>Play the Season</h3>
-      <p>Pay your <b>$125</b> season fee. Run a <b>12-week</b> regular season, single-elimination playoffs, championship trophy, MVP honors.</p>
-    </div>
-  </div>
-</div></div>
+<!-- HOW IT WORKS moved into Mission & Why tab as Block 6 -->
 
 <main>
   <!-- WHY (default landing) -->
@@ -590,6 +596,31 @@
           <p>Bring your wife. Bring your kids. Bring your homies. Family-friendly from tip-off to final buzzer. The crowd is half the energy — and we make sure they want to be there.</p>
         </div>
 
+        <!-- Block 6 — How It Works (moved from above tabs) -->
+        <div class="how-it-works">
+          <div class="head">
+            <div class="sub">— From the gym to the bracket —</div>
+            <h2>How It Works</h2>
+          </div>
+          <div class="steps">
+            <div class="step">
+              <div class="step-num">1</div>
+              <h3>Try Out</h3>
+              <p>Pay your <b>$10</b> and lock your tryout spot. Show up June 27 at Chisholm Trail, ball with the rest of the pool, get your game on tape.</p>
+            </div>
+            <div class="step">
+              <div class="step-num">2</div>
+              <h3>Get Drafted</h3>
+              <p>Top performers earn spots on one of <b>8 teams</b>. Balanced draft by league organizers — no stacked rosters. <b>Buddy packs</b> of up to 3 stay together, with commissioner balancing skill across the league.</p>
+            </div>
+            <div class="step">
+              <div class="step-num">3</div>
+              <h3>Play the Season</h3>
+              <p>Pay your <b>$125</b> season fee. Run a <b>12-week</b> regular season, single-elimination playoffs, championship trophy, MVP honors.</p>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
@@ -611,13 +642,66 @@
           <div class="spots-num" id="spotsNum">64</div>
           <div class="spots-lbl">Spots remaining</div>
           <div class="spots-bar"><i id="spotsBar" style="width:0%"></i></div>
-          <div class="spots-foot" id="spotsFoot">of 64 total · waitlist opens when full</div>
+          <div class="spots-foot" id="spotsFoot">of 64 total · payments stop when full · waitlist auto-opens</div>
+          <div class="waitlist-row">
+            <span class="wl-dot"></span>
+            <span>Live waitlist: <b id="waitlistNum">0</b> on standby</span>
+          </div>
         </div>
       </div>
 
       <form class="reg-form" id="regForm" novalidate>
         <h3>Player Registration</h3>
         <div class="sub">Fill it out, pay your $10, and your printable tryout pass appears instantly. Bring it on your phone or printed on tryout day.</div>
+
+        <!-- Buddy pack selector -->
+        <div class="buddy-card">
+          <div class="buddy-head">— Registration type —</div>
+          <div class="buddy-options">
+            <label class="buddy-opt">
+              <input type="radio" name="registrationType" value="solo" checked>
+              <span class="opt-title">Solo</span>
+              <span class="opt-sub">Just me — open draft pool · $10</span>
+            </label>
+            <label class="buddy-opt">
+              <input type="radio" name="registrationType" value="buddy">
+              <span class="opt-title">Buddy Pack</span>
+              <span class="opt-sub">Up to 3 stay together at draft</span>
+            </label>
+          </div>
+
+          <div class="buddy-details" id="buddyDetails">
+            <div class="buddy-head">— Your role in the pack —</div>
+            <div class="buddy-options">
+              <label class="buddy-opt">
+                <input type="radio" name="buddyRole" value="captain">
+                <span class="opt-title">Captain</span>
+                <span class="opt-sub">You organize · $10 tryout + $20 group fee</span>
+              </label>
+              <label class="buddy-opt">
+                <input type="radio" name="buddyRole" value="player">
+                <span class="opt-title">Player</span>
+                <span class="opt-sub">Joining a captain's pack · $10 tryout</span>
+              </label>
+            </div>
+
+            <div class="buddy-role" id="captainFields">
+              <div class="field-grid" style="margin-top:14px">
+                <div class="field"><label>Buddy 1 name</label><input name="buddy1Name" placeholder="Their full name"></div>
+                <div class="field"><label>Buddy 2 name (optional)</label><input name="buddy2Name" placeholder="Their full name"></div>
+              </div>
+              <div class="buddy-note">After you pay your $10 tryout fee, your tryout pass will show a separate button to pay the <b>$20 captain group reservation fee</b>. Your buddies must register individually and list your name as their captain. Groups of 4+ will be split by the commissioner to balance team skill.</div>
+            </div>
+
+            <div class="buddy-role" id="playerFields">
+              <div class="field" style="margin-top:14px">
+                <label>Captain's full name <span class="req">*</span></label>
+                <input name="captainName" placeholder="Marcus Vale">
+              </div>
+              <div class="buddy-note">Your captain must register separately and pay the $20 group reservation fee. You'll be drafted onto the same team. League commissioner reserves the right to balance team skill across all picks.</div>
+            </div>
+          </div>
+        </div>
 
         <div class="field-grid">
           <div class="field"><label>First name <span class="req">*</span></label><input name="firstName" required placeholder="Marcus"></div>
@@ -774,6 +858,17 @@
             <li>Captains pick team names and reversible jersey colors</li>
             <li>Final rosters announced here the week before opening night</li>
           </ul>
+        </div>
+
+        <div class="info-block">
+          <div class="sub">How drafting works</div>
+          <h3>Solo or with your crew — competition stays balanced.</h3>
+          <p>FWPBL runs a hybrid draft. You can register two ways:</p>
+          <ul>
+            <li><b>Solo ($10)</b> — Try out, get drafted onto the team where your skill best fits. Standard path. Most players will roll this way.</li>
+            <li><b>Buddy pack ($10/each + $20 captain fee)</b> — Up to 3 players (one captain + up to 2 buddies) register together. Captain pays the $20 group reservation fee. The pack stays together at draft.</li>
+          </ul>
+          <p><b>One rule that protects competition:</b> the commissioner reserves the right to place buddy packs onto teams that need their skill profile. You'll play together, but skill stays distributed across the league. <b>Groups of 4+ get split.</b> This isn't a "stack your whole crew on one team" league — it's competitive basketball with the people you came to play with.</p>
         </div>
 
         <div class="info-block">
@@ -963,6 +1058,14 @@
       <button class="pass-btn share" onclick="sharePass()">Share</button>
       <button class="pass-btn print" onclick="window.print()">Print</button>
     </div>
+
+    <!-- Captain group fee CTA — only shown when registered as buddy-pack captain -->
+    <div class="captain-cta" id="captainCta" style="display:none;margin:18px 20px 0">
+      <div class="head">— One more step for captains —</div>
+      <div class="title">Lock In Your Buddy Pack</div>
+      <div class="note">Pay your <b>$20 group reservation fee</b> to guarantee your crew gets drafted onto the same team. Up to 3 stay together — commissioner balances skill across all picks.</div>
+      <button onclick="payCaptainFee()">Pay $20 Group Fee →</button>
+    </div>
   </div>
 </div>
 
@@ -970,7 +1073,8 @@
 /* =================================================================
    LEAGUE CONFIG — edit these to go live
    ================================================================= */
-const STRIPE_LINK    = "https://buy.stripe.com/6oU8wIaQbclt4HX9fm4ZG00";   // your live Stripe Payment Link
+const STRIPE_LINK    = "https://buy.stripe.com/6oU8wIaQbclt4HX9fm4ZG00";   // your live $10 Stripe Payment Link
+const STRIPE_CAPTAIN_LINK = "";  // PASTE your $20 captain group fee Stripe Payment Link here (create in Stripe → Products → Payment Links → $20 one-time)
 const FORM_ENDPOINT  = "https://formspree.io/f/xjgzloed";                   // your Formspree endpoint
 const IG_HANDLE      = "fwpbl_official";          // Instagram handle (no @)
 const PHONE_DISPLAY  = "(817) 555-0123";          // shown to users
@@ -1032,7 +1136,9 @@ function updateSpots(){
   document.getElementById("spotsNum").textContent = spotsRemaining;
   document.getElementById("urgencySpots").textContent = spotsRemaining;
   document.getElementById("spotsBar").style.width = `${((SPOTS_TOTAL-spotsRemaining)/SPOTS_TOTAL)*100}%`;
-  document.getElementById("spotsFoot").textContent = `of ${SPOTS_TOTAL} total · waitlist opens when full`;
+  document.getElementById("spotsFoot").textContent = spotsRemaining > 0
+    ? `of ${SPOTS_TOTAL} total · payments stop when full · waitlist auto-opens`
+    : `Tryout cap reached · payments paused · join the live waitlist below`;
   // Filling Fast badge appears once under 15 spots
   const fillFast = document.getElementById("fillingFast");
   if(fillFast) fillFast.classList.toggle("show", spotsRemaining < 16 && spotsRemaining > 0);
@@ -1053,11 +1159,24 @@ document.getElementById("regForm").addEventListener("submit", async (e)=>{
   const age = Math.floor((Date.now() - dob.getTime()) / (365.25*24*3600*1000));
   if(age < 18){ err.textContent="You must be 18 or older to register."; err.classList.add("show"); return; }
 
+  // Buddy pack — read selections + validate
+  const registrationType = f.querySelector('input[name="registrationType"]:checked')?.value || 'solo';
+  const buddyRole = f.querySelector('input[name="buddyRole"]:checked')?.value || '';
+  if(registrationType === 'buddy'){
+    if(!buddyRole){ err.textContent="Please pick your role in the buddy pack (Captain or Player)."; err.classList.add("show"); return; }
+    if(buddyRole === 'player' && !f.captainName?.value.trim()){ err.textContent="Please enter your captain's name."; err.classList.add("show"); return; }
+    if(buddyRole === 'captain' && !f.buddy1Name?.value.trim()){ err.textContent="Captains: please enter at least one buddy name."; err.classList.add("show"); return; }
+  }
+
   const data = {
     firstName:f.firstName.value, lastName:f.lastName.value, dob:f.dob.value, age,
     height:f.height.value, email:f.email.value, phone:f.phone.value,
     position:f.position.value, jersey:f.jersey.value, skill:f.skill.value,
     ecName:f.ecName.value, ecPhone:f.ecPhone.value,
+    registrationType, buddyRole,
+    captainName: buddyRole === 'player' ? (f.captainName?.value || '') : '',
+    buddy1Name: buddyRole === 'captain' ? (f.buddy1Name?.value || '') : '',
+    buddy2Name: buddyRole === 'captain' ? (f.buddy2Name?.value || '') : '',
     waiverAgreed:true, signedAt:new Date().toISOString()
   };
 
@@ -1108,9 +1227,22 @@ function showPass(data, padded, pid){
     qrTarget.innerHTML = `<div style="width:84px;height:84px;background:#0b0d0c;display:grid;place-items:center;color:#c8ff2e;font-family:monospace;font-size:9px;text-align:center;padding:6px;border-radius:6px">${padded}</div>`;
   }
 
+  // Show captain CTA only for buddy-pack captains
+  const captainCta = document.getElementById("captainCta");
+  if(captainCta) captainCta.style.display = (data.buddyRole === 'captain') ? 'block' : 'none';
+
   document.getElementById("passOverlay").classList.add("show");
   if(spotsRemaining > 0) spotsRemaining--;
   updateSpots();
+}
+
+/* --- captain group fee payment --- */
+function payCaptainFee(){
+  if(!STRIPE_CAPTAIN_LINK){
+    alert("Captain group fee link not yet configured. The league commissioner will reach out by email to collect the $20 group reservation fee. Check your inbox.");
+    return;
+  }
+  window.location.href = STRIPE_CAPTAIN_LINK;
 }
 
 /* --- share --- */
@@ -1125,6 +1257,38 @@ async function sharePass(){
     catch(_){ prompt("Copy this:", text + " " + url); }
   }
 }
+
+/* --- buddy pack toggle logic --- */
+(function(){
+  const details = document.getElementById("buddyDetails");
+  const captainFields = document.getElementById("captainFields");
+  const playerFields = document.getElementById("playerFields");
+
+  document.querySelectorAll('input[name="registrationType"]').forEach(el=>{
+    el.addEventListener("change", e=>{
+      if(e.target.value === "buddy"){
+        details.classList.add("show");
+      } else {
+        details.classList.remove("show");
+        captainFields.classList.remove("show");
+        playerFields.classList.remove("show");
+        document.querySelectorAll('input[name="buddyRole"]').forEach(r=>r.checked=false);
+      }
+    });
+  });
+
+  document.querySelectorAll('input[name="buddyRole"]').forEach(el=>{
+    el.addEventListener("change", e=>{
+      if(e.target.value === "captain"){
+        captainFields.classList.add("show");
+        playerFields.classList.remove("show");
+      } else {
+        playerFields.classList.add("show");
+        captainFields.classList.remove("show");
+      }
+    });
+  });
+})();
 
 /* --- Stripe success return --- */
 (function(){
