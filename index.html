@@ -55,6 +55,11 @@
   .brand .nm small{font-family:var(--mono);font-size:9px;color:var(--muted);letter-spacing:2px;text-transform:uppercase;font-weight:400;margin-top:2px}
   .tabs{display:flex;gap:6px;flex-wrap:wrap}
   .tab{font-family:var(--body);font-weight:700;font-size:13px;letter-spacing:.5px;color:#d4d8d2;background:rgba(255,255,255,.04);border:1px solid var(--line);cursor:pointer;padding:10px 15px;border-radius:10px;transition:.18s;text-transform:uppercase}
+  /* Alternating tab color rhythm — gold-tinted vs white-tinted */
+  .tabs .tab:nth-child(odd):not(.cta-soft):not(.active){color:var(--accent);border-color:rgba(201,169,97,.35);background:rgba(201,169,97,.06)}
+  .tabs .tab:nth-child(even):not(.cta-soft):not(.active){color:#ffffff;border-color:rgba(255,255,255,.18);background:rgba(255,255,255,.05)}
+  .tabs .tab:nth-child(odd):not(.cta-soft):not(.active):hover{background:rgba(201,169,97,.14);border-color:var(--accent)}
+  .tabs .tab:nth-child(even):not(.cta-soft):not(.active):hover{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.4)}
   .tab:hover{color:var(--text);background:var(--surface);border-color:var(--line-strong)}
   .tab.active{color:#0b0d0c;background:var(--accent);border-color:var(--accent);box-shadow:0 4px 14px rgba(201,169,97,.32)}
   .tab.cta{color:var(--accent);box-shadow:inset 0 0 0 1px var(--accent)}
@@ -77,7 +82,7 @@
 
   .price-line{font-family:var(--display);font-size:clamp(22px,3.5vw,30px);margin:24px 0 6px;letter-spacing:.5px}
   .price-line b{color:var(--accent)}
-  .price-sub{color:#b5bcb6;font-size:16px;font-family:var(--mono);letter-spacing:1.5px}
+  .price-sub{color:#ffffff;font-size:16px;font-family:var(--mono);letter-spacing:1.5px;text-shadow:0 2px 8px rgba(0,0,0,.85);font-weight:500}
 
   .big-cta{display:inline-block;background:var(--accent);color:#0b0d0c;font-family:var(--display);font-size:26px;letter-spacing:1.5px;text-transform:uppercase;padding:20px 54px;border:none;border-radius:13px;cursor:pointer;margin-top:30px;transition:.2s;position:relative;overflow:hidden;box-shadow:0 6px 22px rgba(201,169,97,.22)}
   .big-cta:hover{transform:translateY(-3px);box-shadow:0 18px 38px rgba(201,169,97,.45)}
@@ -107,20 +112,62 @@
   }
   @keyframes sheen{0%{transform:translateX(-100%)}40%,100%{transform:translateX(100%)}}
 
-  .hero-contact{margin-top:22px;font-family:var(--mono);font-size:13px;letter-spacing:1.5px;text-transform:uppercase;color:#b5bcb6}
+  .hero-contact{margin-top:22px;font-family:var(--mono);font-size:13px;letter-spacing:1.5px;text-transform:uppercase;color:#ffffff;text-shadow:0 2px 8px rgba(0,0,0,.85);font-weight:500}
   .hero-contact a{color:var(--muted);text-decoration:none;transition:.15s}
   .hero-contact a:hover{color:var(--accent)}
 
-  .hero-meta{display:flex;justify-content:center;flex-wrap:wrap;gap:24px;margin-top:34px;font-family:var(--mono);font-size:14px;color:#b5bcb6;letter-spacing:1px}
+  .hero-meta{display:flex;justify-content:center;flex-wrap:wrap;gap:24px;margin-top:34px;font-family:var(--mono);font-size:14px;color:#ffffff;letter-spacing:1px;text-shadow:0 2px 8px rgba(0,0,0,.85);font-weight:500}
   .hero-meta b{color:var(--text);font-family:var(--body);font-weight:600}
 
   /* sub-tagline under main tagline */
-  .hero .tagline small{display:block;font-size:15px;color:#a8b0a8;font-weight:400;letter-spacing:.5px;margin-top:8px;font-style:normal}
+  .hero .tagline small{display:block;font-size:16px;color:#ffffff;font-weight:500;letter-spacing:.5px;margin-top:10px;font-style:normal;text-shadow:0 2px 8px rgba(0,0,0,.85)}
 
   /* Calling all hoopers strip — sits between hero and mission */
   .hero-call-strip{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:rgba(200,255,46,.04);padding:22px 0;text-align:center;font-family:var(--display);font-size:clamp(15px,2.8vw,22px);letter-spacing:1.5px;text-transform:uppercase;color:var(--accent-2);line-height:1.35;position:relative;z-index:2}
   .hero-call-strip b{color:var(--text);font-weight:400}
   @media(max-width:680px){.hero-call-strip{padding:18px 16px;letter-spacing:1px}}
+
+  /* ==========================================================
+     STICKY NAV — Option A: hero scrolls away, nav stays at top
+     ========================================================== */
+  header{position:sticky;top:0;z-index:50;background:rgba(11,13,12,.92);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  header.scrolled{background:rgba(11,13,12,.97);box-shadow:0 4px 20px rgba(0,0,0,.4)}
+
+  /* ==========================================================
+     WELCOME MODAL — first visit only
+     ========================================================== */
+  .welcome-overlay{position:fixed;inset:0;background:rgba(0,0,0,.85);z-index:200;display:none;align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
+  .welcome-overlay.show{display:flex;animation:fadeIn .3s ease-out}
+  .welcome-card{max-width:440px;width:100%;background:linear-gradient(140deg,#181614,#1f1d1a);border:1px solid rgba(201,169,97,.4);border-radius:18px;padding:36px 32px;text-align:center;position:relative;box-shadow:0 20px 60px rgba(0,0,0,.6)}
+  .welcome-card::before{content:"";position:absolute;top:0;left:0;width:100%;height:4px;background:linear-gradient(90deg,var(--accent),var(--gold),var(--accent));border-radius:18px 18px 0 0}
+  .welcome-eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:3px;color:var(--accent);text-transform:uppercase;margin-bottom:12px}
+  .welcome-card h2{font-family:var(--display);font-size:clamp(28px,5vw,38px);letter-spacing:1px;text-transform:uppercase;line-height:1.05;margin-bottom:14px;color:var(--text)}
+  .welcome-card p{color:#d8ddd6;font-size:15px;line-height:1.6;margin-bottom:14px}
+  .welcome-card p:last-of-type{margin-bottom:26px}
+  .welcome-card b{color:var(--accent)}
+  .welcome-actions{display:flex;gap:10px;flex-direction:column}
+  .welcome-btn{font-family:var(--display);font-size:14px;letter-spacing:1px;text-transform:uppercase;padding:13px 22px;border-radius:10px;cursor:pointer;transition:.15s;border:none}
+  .welcome-btn.primary{background:var(--accent);color:#0b0d0c;font-weight:700}
+  .welcome-btn.primary:hover{transform:translateY(-2px);box-shadow:0 8px 22px rgba(201,169,97,.32)}
+  .welcome-btn.ghost{background:transparent;color:var(--text);border:1px solid var(--line-strong)}
+  .welcome-btn.ghost:hover{background:rgba(255,255,255,.06);border-color:var(--accent)}
+  @keyframes fadeIn{from{opacity:0}to{opacity:1}}
+
+  /* ==========================================================
+     REMINDER BUBBLE — drops in after 60s of activity
+     ========================================================== */
+  .reminder-bubble{position:fixed;bottom:24px;right:24px;z-index:150;max-width:300px;background:linear-gradient(140deg,#181614,#1f1d1a);border:1.5px solid var(--accent);border-radius:14px;padding:16px 18px;box-shadow:0 12px 32px rgba(0,0,0,.5),0 0 24px rgba(201,169,97,.18);transform:translateY(120%);opacity:0;transition:transform .4s cubic-bezier(.34,1.56,.64,1),opacity .3s}
+  .reminder-bubble.show{transform:translateY(0);opacity:1}
+  .reminder-bubble .rb-head{display:flex;align-items:center;gap:8px;margin-bottom:8px}
+  .reminder-bubble .rb-dot{width:8px;height:8px;border-radius:50%;background:var(--accent);box-shadow:0 0 10px var(--accent);animation:pulse 1.4s ease-in-out infinite}
+  .reminder-bubble .rb-title{font-family:var(--mono);font-size:11px;letter-spacing:2px;color:var(--accent);text-transform:uppercase}
+  .reminder-bubble p{color:#d8ddd6;font-size:13px;line-height:1.5;margin-bottom:12px}
+  .reminder-bubble b{color:var(--accent);font-weight:700}
+  .reminder-bubble .rb-go{font-family:var(--display);font-size:13px;letter-spacing:1px;text-transform:uppercase;background:var(--accent);color:#0b0d0c;border:none;border-radius:8px;padding:9px 14px;cursor:pointer;width:100%;font-weight:700;transition:.15s}
+  .reminder-bubble .rb-go:hover{transform:translateY(-1px);box-shadow:0 4px 14px rgba(201,169,97,.32)}
+  .reminder-bubble .rb-close{position:absolute;top:8px;right:10px;background:none;border:none;color:var(--muted);font-size:18px;cursor:pointer;padding:4px 8px;line-height:1;transition:.15s}
+  .reminder-bubble .rb-close:hover{color:var(--text)}
+  @media(max-width:560px){.reminder-bubble{bottom:16px;right:16px;left:16px;max-width:none}}
 
   /* mission */
   .mission{margin:60px 0;border:1px solid var(--line);border-radius:20px;padding:40px;background:linear-gradient(135deg,var(--surface),var(--surface-2))}
@@ -346,13 +393,13 @@
     content:"";position:absolute;inset:0;z-index:-2;
     background-image: var(--hero-photo);
     background-size:cover;background-position:center 60%;
-    filter:saturate(1) brightness(.72);
+    filter:saturate(1.05) brightness(.82);
   }
   .hero::after{
     content:"";position:absolute;inset:0;z-index:-1;
     background:
-      radial-gradient(900px 500px at 50% 100%, rgba(255,255,255,.04), transparent 70%),
-      linear-gradient(180deg, rgba(11,13,12,.55) 0%, rgba(11,13,12,.32) 38%, rgba(11,13,12,.78) 100%);
+      radial-gradient(900px 500px at 50% 100%, rgba(255,255,255,.05), transparent 70%),
+      linear-gradient(180deg, rgba(11,13,12,.4) 0%, rgba(11,13,12,.18) 38%, rgba(11,13,12,.68) 100%);
   }
   .hero .wrap{position:relative;z-index:2}
 
@@ -493,7 +540,7 @@
   <div class="wrap">
     <div class="eyebrow">— Inaugural Season · Summer 2026 —</div>
     <h1>FORT WORTH PREMIUM<span class="alt">BASKETBALL LEAGUE</span></h1>
-    <div class="tagline">Men's Competitive Basketball · 25+ Focus<small>Skilled 18–24 welcome if you can ball</small></div>
+    <div class="tagline">Men's Competitive Basketball · 25+ Focus<small>18+ ballers welcome — if you can hoop, you can play</small></div>
 
     <div class="urgency">
       <span class="pulse"></span>
@@ -1304,6 +1351,109 @@ async function sharePass(){
     }
   }
 })();
+
+/* --- Welcome modal (first visit only) --- */
+(function(){
+  const KEY = "fwpbl_seen_welcome_v1";
+  if(localStorage.getItem(KEY)) return;
+  const overlay = document.getElementById("welcomeOverlay");
+  if(!overlay) return;
+  setTimeout(()=>{
+    overlay.classList.add("show");
+  }, 600);
+  function dismiss(){
+    overlay.classList.remove("show");
+    localStorage.setItem(KEY, "1");
+  }
+  document.getElementById("welcomeGo").addEventListener("click", ()=>{
+    dismiss();
+    setTimeout(()=>{
+      goToTab("tryouts");
+      document.getElementById("regForm")?.scrollIntoView({behavior:"smooth", block:"start"});
+    }, 200);
+  });
+  document.getElementById("welcomeBrowse").addEventListener("click", dismiss);
+  overlay.addEventListener("click", (e)=>{ if(e.target===overlay) dismiss(); });
+})();
+
+/* --- Reminder bubble (60s of activity, dismissible, session-only) --- */
+(function(){
+  const KEY = "fwpbl_dismissed_bubble";
+  if(sessionStorage.getItem(KEY)) return;
+  const bubble = document.getElementById("reminderBubble");
+  if(!bubble) return;
+  setTimeout(()=>{
+    // Don't show if user is already on tryouts tab
+    if(document.querySelector('.panel.active')?.id === 'tryouts') return;
+    bubble.classList.add("show");
+  }, 60000);
+  document.getElementById("bubbleClose").addEventListener("click", ()=>{
+    bubble.classList.remove("show");
+    sessionStorage.setItem(KEY, "1");
+  });
+  document.getElementById("bubbleGo").addEventListener("click", ()=>{
+    bubble.classList.remove("show");
+    sessionStorage.setItem(KEY, "1");
+    goToTab("tryouts");
+    document.getElementById("regForm")?.scrollIntoView({behavior:"smooth", block:"start"});
+  });
+})();
+
+/* --- Sticky nav scroll shadow --- */
+(function(){
+  const header = document.querySelector("header");
+  if(!header) return;
+  let ticking = false;
+  window.addEventListener("scroll", ()=>{
+    if(!ticking){
+      requestAnimationFrame(()=>{
+        if(window.scrollY > 80) header.classList.add("scrolled");
+        else header.classList.remove("scrolled");
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+})();
+
+/* --- Tab click: scroll up to top of tab content so hero doesn't keep dominating --- */
+(function(){
+  document.querySelectorAll(".tab").forEach(btn=>{
+    btn.addEventListener("click", ()=>{
+      // Small delay so the tab content has time to render before scroll
+      setTimeout(()=>{
+        const main = document.querySelector("main");
+        if(main) window.scrollTo({top: main.offsetTop - 70, behavior:"smooth"});
+      }, 80);
+    });
+  });
+})();
 </script>
+
+<!-- Welcome modal (first visit only) -->
+<div class="welcome-overlay" id="welcomeOverlay">
+  <div class="welcome-card">
+    <div class="welcome-eyebrow">— Welcome to FWPBL —</div>
+    <h2>Fort Worth's Competitive Basketball League</h2>
+    <p>Inaugural season <b>Summer 2026</b>. Tryouts <b>June 27</b>. 8 teams, 64 spots, real refs, real runs.</p>
+    <p>Ready to lock in your spot? Hit <b>Tryout / Reg Form</b>. Want to learn the story first? Click through the tabs.</p>
+    <div class="welcome-actions">
+      <button class="welcome-btn primary" id="welcomeGo">Take Me To The Form →</button>
+      <button class="welcome-btn ghost" id="welcomeBrowse">Let Me Browse First</button>
+    </div>
+  </div>
+</div>
+
+<!-- Reminder bubble (drops in after 60s) -->
+<div class="reminder-bubble" id="reminderBubble">
+  <button class="rb-close" id="bubbleClose" aria-label="Close">✕</button>
+  <div class="rb-head">
+    <span class="rb-dot"></span>
+    <span class="rb-title">Spots are limited</span>
+  </div>
+  <p><b>64 spots · 8 teams.</b> Lock yours in before tryouts close.</p>
+  <button class="rb-go" id="bubbleGo">Lock In My Spot →</button>
+</div>
+
 </body>
 </html>
