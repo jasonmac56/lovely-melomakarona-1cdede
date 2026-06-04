@@ -5,10 +5,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Fort Worth Premium Basketball League — 25+ Men's Competitive Hoops</title>
 <meta name="description" content="A new 25+ competitive men's basketball league launching in Fort Worth. $10 tryout · $125 season. Tryouts June 27, 2026 at Chisholm Trail. Reserve your spot now.">
+<link rel="icon" type="image/jpeg" href="logo.jpg">
+<link rel="apple-touch-icon" href="logo.jpg">
 <meta property="og:title" content="Fort Worth Premium Basketball League">
 <meta property="og:description" content="25+ men's competitive hoops in Fort Worth. Tryouts June 27, 2026. Reserve your spot for $10.">
 <meta property="og:type" content="website">
-<meta property="og:image" content="https://fwpbl.com/og-image.jpg">
+<meta property="og:image" content="https://fwpbl.com/logo.jpg">
 <meta property="og:url" content="https://fwpbl.com">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#c9a961">
@@ -49,8 +51,7 @@
   header.nav{position:sticky;top:0;z-index:50;backdrop-filter:blur(14px);background:rgba(11,13,12,.8);border-bottom:1px solid var(--line)}
   .nav-inner{display:flex;align-items:center;justify-content:space-between;height:68px;gap:14px}
   .brand{display:flex;align-items:center;gap:11px;font-family:var(--display);letter-spacing:.5px;font-size:18px;line-height:1.1}
-  .brand .crest{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;background:var(--accent);color:#0b0d0c;font-family:var(--display);font-size:17px;flex:none;
-    background-image:repeating-linear-gradient(45deg,transparent,transparent 7px,rgba(0,0,0,.2) 7px,rgba(0,0,0,.2) 8px),var(--accent)}
+  .brand .crest{width:42px;height:42px;border-radius:50%;background-image:url('logo.jpg');background-size:cover;background-position:center;flex:none;text-indent:-9999px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,.4);border:1px solid rgba(201,169,97,.3)}
   .brand .nm{display:flex;flex-direction:column}
   .brand .nm small{font-family:var(--mono);font-size:9px;color:var(--muted);letter-spacing:2px;text-transform:uppercase;font-weight:400;margin-top:2px}
   .tabs{display:flex;gap:6px;flex-wrap:wrap}
@@ -327,7 +328,7 @@
   .pass-card{background:#fff;color:#0b0d0c;border-radius:22px;overflow:hidden;box-shadow:0 30px 80px rgba(0,0,0,.6);font-family:var(--body)}
   .pass-top{background:#0b0d0c;color:#fff;padding:20px 26px;display:flex;align-items:center;justify-content:space-between}
   .pass-top .lg{display:flex;align-items:center;gap:10px;font-family:var(--display);letter-spacing:.5px;font-size:15px}
-  .pass-top .lg .crest{width:26px;height:26px;border-radius:50%;background:var(--accent);display:grid;place-items:center;color:#0b0d0c;font-family:var(--display);font-size:13px;
+  .pass-top .lg .crest{width:26px;height:26px;border-radius:50%;background-image:url('logo.jpg');background-size:cover;background-position:center;text-indent:-9999px;overflow:hidden;
     background-image:repeating-linear-gradient(45deg,transparent,transparent 6px,rgba(0,0,0,.2) 6px,rgba(0,0,0,.2) 7px),var(--accent)}
   .pass-top .ttl{font-family:var(--mono);font-size:10px;letter-spacing:2px;color:#888}
   .pass-num{padding:28px 26px 18px;text-align:center;border-bottom:2px dashed #e3e3e3;position:relative}
@@ -1433,6 +1434,7 @@ async function sharePass(){
 <!-- Welcome modal (first visit only) -->
 <div class="welcome-overlay" id="welcomeOverlay">
   <div class="welcome-card">
+    <img src="logo.jpg" alt="FWPBL" style="width:90px;height:90px;border-radius:50%;display:block;margin:0 auto 14px;box-shadow:0 4px 14px rgba(0,0,0,.4);border:1px solid rgba(201,169,97,.4)">
     <div class="welcome-eyebrow">— Welcome to FWPBL —</div>
     <h2>Fort Worth's Competitive Basketball League</h2>
     <p>Inaugural season <b>Summer 2026</b>. Tryouts <b>June 27</b>. 8 teams, 64 spots, real refs, real runs.</p>
