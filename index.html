@@ -4,11 +4,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Fort Worth Premium Basketball League — 25+ Men's Competitive Hoops</title>
-<meta name="description" content="A new 25+ competitive men's basketball league launching in Fort Worth. $10 tryout · $125 season. Tryouts June 27, 2026 at Chisholm Trail. Reserve your spot now.">
+<meta name="description" content="A new 25+ competitive men's basketball league launching in Fort Worth. $10 tryout · $125 season. Tryouts July 25, 2026 at Chisholm Trail. Reserve your spot now.">
 <link rel="icon" type="image/jpeg" href="logo.jpg">
 <link rel="apple-touch-icon" href="logo.jpg">
 <meta property="og:title" content="Fort Worth Premium Basketball League">
-<meta property="og:description" content="25+ men's competitive hoops in Fort Worth. Tryouts June 27, 2026. Reserve your spot for $10.">
+<meta property="og:description" content="25+ men's competitive hoops in Fort Worth. Tryouts July 25, 2026. Reserve your spot for $10.">
 <meta property="og:type" content="website">
 <meta property="og:image" content="https://fwpbl.com/logo.jpg">
 <meta property="og:url" content="https://fwpbl.com">
@@ -127,6 +127,22 @@
   .hero-call-strip{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:rgba(200,255,46,.04);padding:22px 0;text-align:center;font-family:var(--display);font-size:clamp(15px,2.8vw,22px);letter-spacing:1.5px;text-transform:uppercase;color:var(--accent-2);line-height:1.35;position:relative;z-index:2}
   .hero-call-strip b{color:var(--text);font-weight:400}
   @media(max-width:680px){.hero-call-strip{padding:18px 16px;letter-spacing:1px}}
+
+  /* ==========================================================
+     HERO + CALLING STRIP — only visible on Mission & Why tab
+     Switching to any other tab hides them so the photo doesn't
+     show on every tab click.
+     ========================================================== */
+  body.tab-tryouts .hero,
+  body.tab-tryouts .hero-call-strip,
+  body.tab-standings .hero,
+  body.tab-standings .hero-call-strip,
+  body.tab-fixtures .hero,
+  body.tab-fixtures .hero-call-strip,
+  body.tab-teams .hero,
+  body.tab-teams .hero-call-strip,
+  body.tab-stats .hero,
+  body.tab-stats .hero-call-strip{display:none}
 
   /* ==========================================================
      FLOATING TRYOUT CTA — mobile only, always visible
@@ -402,8 +418,8 @@
   @media(max-width:680px){
     .tabs{justify-content:center}
     .tab{padding:9px 13px;font-size:12px;letter-spacing:.3px}
-    /* On mobile, push Tryout/Reg Form to the FRONT of the nav */
-    .tab.cta-soft{order:-1;width:100%;margin-bottom:4px;padding:12px 14px;font-size:13px}
+    /* On mobile, make Tryout/Reg Form full-width so it dominates the nav */
+    .tab.cta-soft{width:100%;margin-bottom:4px;padding:12px 14px;font-size:13px}
   }
     .contact-strip .wrap{justify-content:center;gap:14px}
     .hero{padding:36px 0 24px}
@@ -535,13 +551,13 @@
 <!-- ALWAYS-VISIBLE CONTACT STRIP -->
 <div class="contact-strip">
   <div class="wrap">
-    <a id="igLink" href="https://instagram.com/fwpbl_official" target="_blank" rel="noopener">
-      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.2c3.2 0 3.6 0 4.8.1 1.2 0 1.8.2 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.4 1 .4 2.2.1 1.3.1 1.6.1 4.8s0 3.6-.1 4.8c0 1.2-.2 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1 .4-2.2.4-1.3.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-1.2 0-1.8-.2-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1-.4-2.2-.1-1.3-.1-1.6-.1-4.8s0-3.6.1-4.8c0-1.2.2-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1-.4 2.2-.4 1.3-.1 1.6-.1 4.8-.1m0-2.2C8.7 0 8.3 0 7.1.1 5.8.1 5 .3 4.2.6c-.8.3-1.5.7-2.2 1.4C1.3 2.7.9 3.4.6 4.2.3 5 .1 5.8.1 7.1 0 8.3 0 8.7 0 12s0 3.7.1 4.9c0 1.3.2 2.1.5 2.9.3.8.7 1.5 1.4 2.2.7.7 1.4 1.1 2.2 1.4.8.3 1.6.5 2.9.5 1.2.1 1.6.1 4.9.1s3.7 0 4.9-.1c1.3 0 2.1-.2 2.9-.5.8-.3 1.5-.7 2.2-1.4.7-.7 1.1-1.4 1.4-2.2.3-.8.5-1.6.5-2.9.1-1.2.1-1.6.1-4.9s0-3.7-.1-4.9c0-1.3-.2-2.1-.5-2.9-.3-.8-.7-1.5-1.4-2.2C21.3 1.3 20.6.9 19.8.6 19 .3 18.2.1 16.9.1 15.7 0 15.3 0 12 0z"/><path d="M12 5.8c-3.4 0-6.2 2.8-6.2 6.2s2.8 6.2 6.2 6.2 6.2-2.8 6.2-6.2-2.8-6.2-6.2-6.2zm0 10.2c-2.2 0-4-1.8-4-4s1.8-4 4-4 4 1.8 4 4-1.8 4-4 4z"/><circle cx="18.4" cy="5.6" r="1.4"/></svg>
-      <span id="igHandle">@fwpbl_official</span>
+    <a id="fbLink" href="https://www.facebook.com/fwpblofficial" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+      <span id="fbHandle">@fwpblofficial</span>
     </a>
-    <a id="phoneLink" href="tel:+18175550123">
+    <a id="phoneLink" href="tel:+16823821794">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-      <span id="phoneText">(817) 555-0123</span>
+      <span id="phoneText">(682) 382-1794</span>
     </a>
     <a id="emailLink" href="mailto:contact@fwpbl.com">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
@@ -557,12 +573,12 @@
       <span class="nm"><span>FORT WORTH</span><small>Premium Basketball League</small></span>
     </div>
     <nav class="tabs">
+      <button class="tab cta-soft" data-tab="tryouts">Tryout / Reg Form</button>
       <button class="tab active" data-tab="why">Mission &amp; Why</button>
       <button class="tab" data-tab="standings">Standings</button>
       <button class="tab" data-tab="fixtures">Games</button>
       <button class="tab" data-tab="teams">Teams</button>
       <button class="tab" data-tab="stats">Stats</button>
-      <button class="tab cta-soft" data-tab="tryouts">Tryout / Reg Form</button>
     </nav>
   </div>
 </header>
@@ -591,13 +607,13 @@
     <button class="big-cta" onclick="goToTab('tryouts')">Lock In My Spot — $10 →</button>
 
     <div class="hero-contact">
-      Questions? DM <a id="heroIg" href="https://instagram.com/fwpbl_official" target="_blank" rel="noopener">@fwpbl_official</a> · <a id="heroPhone" href="tel:+18175550123">(817) 555-0123</a>
+      Questions? Message us on <a id="heroFb" href="https://www.facebook.com/fwpblofficial" target="_blank" rel="noopener">Facebook</a> · <a id="heroPhone" href="tel:+16823821794">(682) 382-1794</a>
     </div>
 
     <div class="hero-meta">
-      <span>Tryouts <b>Sat Jun 27, 2026</b></span>
+      <span>Tryouts <b>Sat Jul 25, 2026</b></span>
       <span>Venue <b>Chisholm Trail Community Center</b></span>
-      <span>Season starts <b>Mid-July</b></span>
+      <span>Season starts <b>Early August</b></span>
     </div>
   </div>
 </section>
@@ -685,7 +701,7 @@
             <div class="step">
               <div class="step-num">1</div>
               <h3>Try Out</h3>
-              <p>Pay your <b>$10</b> and lock your tryout spot. Show up June 27 at Chisholm Trail, ball with the rest of the pool, get your game on tape.</p>
+              <p>Pay your <b>$10</b> and lock your tryout spot. Show up July 25 at Chisholm Trail, ball with the rest of the pool, get your game on tape.</p>
             </div>
             <div class="step">
               <div class="step-num">2</div>
@@ -712,10 +728,10 @@
       <div class="tryout-hero">
         <div class="tryout-info">
           <h3>Inaugural Tryout Day</h3>
-          <div class="info-row"><span class="lbl">When</span><span class="val">Sat Jun 27, 2026<small>10:00 AM – 1:00 PM</small></span></div>
+          <div class="info-row"><span class="lbl">When</span><span class="val">Sat Jul 25, 2026<small>11:00 AM – 1:00 PM</small></span></div>
           <div class="info-row"><span class="lbl">Where</span><span class="val">Chisholm Trail Community Center<small>Fort Worth, TX</small></span></div>
           <div class="info-row"><span class="lbl">Bring</span><span class="val">Athletic gear, both shoes, water<small>Reversibles provided at check-in</small></span></div>
-          <div class="info-row"><span class="lbl">Fee</span><span class="val">$10 tryout (non-refundable)<small>$125 season fee only if selected · due mid-July</small></span></div>
+          <div class="info-row"><span class="lbl">Fee</span><span class="val">$10 tryout (non-refundable)<small>$125 season fee only if selected · due early August</small></span></div>
         </div>
         <div class="spots-card">
           <div class="spots-num" id="spotsNum">64</div>
@@ -788,7 +804,7 @@
           <div class="field"><label>Date of birth <span class="req">*</span></label><input type="date" name="dob" required></div>
           <div class="field"><label>Height</label><input name="height" placeholder='6&apos;2"'></div>
           <div class="field"><label>Email <span class="req">*</span></label><input type="email" name="email" required placeholder="player@email.com"></div>
-          <div class="field"><label>Phone <span class="req">*</span></label><input type="tel" name="phone" required placeholder="817-555-0123"></div>
+          <div class="field"><label>Phone <span class="req">*</span></label><input type="tel" name="phone" required placeholder="682-555-1234"></div>
 
           <div class="field"><label>Position <span class="req">*</span></label>
             <select name="position" required>
@@ -840,9 +856,9 @@
         <details class="qa"><summary>What if I don't make the cut after tryouts?</summary><div class="ans">If you aren't selected, your $10 tryout fee covers your participation in the open run and is non-refundable. You will not be charged the $125 season fee. We'll also connect you with other Fort Worth leagues we know of that might be a better skill fit.</div></details>
         <details class="qa"><summary>Are refunds available?</summary><div class="ans">The $10 tryout fee is non-refundable. The $125 season fee is refundable up to the first regular season game; after the first game, it is non-refundable. If the league cancels the season for any reason, season fees are fully refunded.</div></details>
         <details class="qa"><summary>Who can play? Age limits?</summary><div class="ans">You must be 18 or older to participate. Our focus is 25+ players, but skilled 18–24 year olds are welcome to try out and earn a roster spot. Skill level is intermediate or advanced — this is a competitive league.</div></details>
-        <details class="qa"><summary>When does the season start and end?</summary><div class="ans">Tryouts: Saturday, June 27, 2026. Teams formed and announced the following week. Regular season tips off mid-July and runs 12 weeks through early October, followed by a single-elimination playoff bracket.</div></details>
+        <details class="qa"><summary>When does the season start and end?</summary><div class="ans">Tryouts: Saturday, July 25, 2026. Teams formed and announced the following week. Regular season tips off early August and runs 12 weeks through early October, followed by a single-elimination playoff bracket.</div></details>
         <details class="qa"><summary>Where are games played?</summary><div class="ans">Primary venue is Chisholm Trail Community Center. Some weeks games may rotate to other Fort Worth rec centers depending on court availability. Schedule will be posted here before the season starts.</div></details>
-        <details class="qa"><summary>How do I contact the league?</summary><div class="ans">DM us on Instagram <a id="faqIg" href="https://instagram.com/fwpbl_official" target="_blank" rel="noopener">@fwpbl_official</a>, text or call <a id="faqPhone" href="tel:+18175550123">(817) 555-0123</a>, or email <a id="faqEmail" href="mailto:contact@fwpbl.com">contact@fwpbl.com</a>. We typically respond within 24 hours.</div></details>
+        <details class="qa"><summary>How do I contact the league?</summary><div class="ans">Message us on <a id="faqFb" href="https://www.facebook.com/fwpblofficial" target="_blank" rel="noopener">Facebook</a>, text or call <a id="faqPhone" href="tel:+16823821794">(682) 382-1794</a>, or email <a id="faqEmail" href="mailto:contact@fwpbl.com">contact@fwpbl.com</a>. We typically respond within 24 hours.</div></details>
       </div>
     </div>
   </section>
@@ -850,7 +866,7 @@
   <!-- OFF-SEASON PANELS -->
   <section class="panel" id="standings">
     <div class="wrap">
-      <div class="sec-head"><h2>Standings</h2><span>Live week 1 · mid-July 2026</span></div>
+      <div class="sec-head"><h2>Standings</h2><span>Live week 1 · early August 2026</span></div>
       <div class="standings-card">
         <table>
           <thead><tr>
@@ -869,7 +885,7 @@
             <tr><td class="pos">8</td><td class="team-name">— Team 8 (TBD)</td><td>0</td><td>0</td><td>—</td><td>—</td><td>—</td><td class="pts">—</td></tr>
           </tbody>
         </table>
-        <div class="standings-foot">8 teams · tip-off mid-July · standings update after every game night</div>
+        <div class="standings-foot">8 teams · tip-off early August · standings update after every game night</div>
       </div>
     </div>
   </section>
@@ -904,7 +920,7 @@
         <div class="info-block">
           <div class="sub">Season structure</div>
           <h3>12 weeks regular · playoffs to close</h3>
-          <p>Regular season runs mid-July through early October. Standings determine playoff seeding. A single-elimination bracket caps the year with a championship game, trophies, and MVP recognition.</p>
+          <p>Regular season runs early August through early October. Standings determine playoff seeding. A single-elimination bracket caps the year with a championship game, trophies, and MVP recognition.</p>
         </div>
 
         <div class="info-block">
@@ -986,7 +1002,7 @@
 
   <section class="panel" id="stats">
     <div class="wrap">
-      <div class="sec-head"><h2>Stat Leaders</h2><span>Updates every Monday · season starts mid-July</span></div>
+      <div class="sec-head"><h2>Stat Leaders</h2><span>Updates every Monday · season starts early August</span></div>
 
       <div class="lb-grid">
         <div class="lb-card">
@@ -1088,13 +1104,13 @@
       <small>© 2026 · Built in Fort Worth, TX · Played in the spirit of Coach Robert Hughes</small>
     </div>
     <div class="foot-contact">
-      <a id="footIg" href="https://instagram.com/fwpbl_official" target="_blank" rel="noopener">
-        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.2c3.2 0 3.6 0 4.8.1 1.2 0 1.8.2 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.4 1 .4 2.2.1 1.3.1 1.6.1 4.8s0 3.6-.1 4.8c0 1.2-.2 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1 .4-2.2.4-1.3.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-1.2 0-1.8-.2-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1-.4-2.2-.1-1.3-.1-1.6-.1-4.8s0-3.6.1-4.8c0-1.2.2-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1-.4 2.2-.4 1.3-.1 1.6-.1 4.8-.1m0-2.2C8.7 0 8.3 0 7.1.1 5.8.1 5 .3 4.2.6c-.8.3-1.5.7-2.2 1.4C1.3 2.7.9 3.4.6 4.2.3 5 .1 5.8.1 7.1 0 8.3 0 8.7 0 12s0 3.7.1 4.9c0 1.3.2 2.1.5 2.9.3.8.7 1.5 1.4 2.2.7.7 1.4 1.1 2.2 1.4.8.3 1.6.5 2.9.5 1.2.1 1.6.1 4.9.1s3.7 0 4.9-.1c1.3 0 2.1-.2 2.9-.5.8-.3 1.5-.7 2.2-1.4.7-.7 1.1-1.4 1.4-2.2.3-.8.5-1.6.5-2.9.1-1.2.1-1.6.1-4.9s0-3.7-.1-4.9c0-1.3-.2-2.1-.5-2.9-.3-.8-.7-1.5-1.4-2.2C21.3 1.3 20.6.9 19.8.6 19 .3 18.2.1 16.9.1 15.7 0 15.3 0 12 0z"/><path d="M12 5.8c-3.4 0-6.2 2.8-6.2 6.2s2.8 6.2 6.2 6.2 6.2-2.8 6.2-6.2-2.8-6.2-6.2-6.2zm0 10.2c-2.2 0-4-1.8-4-4s1.8-4 4-4 4 1.8 4 4-1.8 4-4 4z"/><circle cx="18.4" cy="5.6" r="1.4"/></svg>
-        <span id="footIgHandle">@fwpbl_official</span>
+      <a id="footFb" href="https://www.facebook.com/fwpblofficial" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+        <span id="footFbHandle">@fwpblofficial</span>
       </a>
-      <a id="footPhone" href="tel:+18175550123">
+      <a id="footPhone" href="tel:+16823821794">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-        <span id="footPhoneText">(817) 555-0123</span>
+        <span id="footPhoneText">(682) 382-1794</span>
       </a>
       <a id="footEmail" href="mailto:contact@fwpbl.com">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
@@ -1121,8 +1137,8 @@
         <div class="player" id="passName">PLAYER NAME</div>
         <div class="meta" id="passMeta">Position · Skill level</div>
         <div class="pass-grid">
-          <div><small>Date</small><b>Sat Jun 27, 2026</b></div>
-          <div><small>Time</small><b>10:00 AM – 1:00 PM</b></div>
+          <div><small>Date</small><b>Sat Jul 25, 2026</b></div>
+          <div><small>Time</small><b>11:00 AM – 1:00 PM</b></div>
           <div><small>Venue</small><b>Chisholm Trail CC</b></div>
           <div><small>Jersey</small><b id="passJersey">—</b></div>
         </div>
@@ -1155,23 +1171,22 @@
 const STRIPE_LINK    = "https://buy.stripe.com/6oU8wIaQbclt4HX9fm4ZG00";   // your live $10 Stripe Payment Link
 const STRIPE_CAPTAIN_LINK = "";  // PASTE your $20 captain group fee Stripe Payment Link here (create in Stripe → Products → Payment Links → $20 one-time)
 const FORM_ENDPOINT  = "https://formspree.io/f/xjgzloed";                   // your Formspree endpoint
-const IG_HANDLE      = "fwpbl_official";          // Instagram handle (no @)
-const PHONE_DISPLAY  = "(817) 555-0123";          // shown to users
-const PHONE_TEL      = "+18175550123";            // tel: link format
+const FB_URL         = "https://www.facebook.com/fwpblofficial";  // your Facebook Page URL
+const FB_HANDLE      = "@fwpblofficial";                          // shown to users
+const PHONE_DISPLAY  = "(682) 382-1794";          // shown to users
+const PHONE_TEL      = "+16823821794";            // tel: link format
 const CONTACT_EMAIL  = "contact@fwpbl.com";       // your real email
 const SPOTS_TOTAL    = 64;                        // tryout cap
-const TRYOUT_DATE    = "2026-06-27T10:00:00-05:00"; // Saturday June 27, 2026 10:00 AM CT
+const TRYOUT_DATE    = "2026-07-25T11:00:00-05:00"; // Saturday July 25, 2026 11:00 AM CT
 let   spotsRemaining = 64;
 
 /* --- inject config into the page --- */
 (function setContactEverywhere(){
-  const ig    = "@" + IG_HANDLE;
-  const igUrl = "https://instagram.com/" + IG_HANDLE;
   const tel   = "tel:" + PHONE_TEL;
   const mail  = "mailto:" + CONTACT_EMAIL;
 
-  ["igHandle","heroIg","footIgHandle"].forEach(id=>{const el=document.getElementById(id);if(el)el.textContent=ig;});
-  ["igLink","heroIg","footIg","faqIg"].forEach(id=>{const el=document.getElementById(id);if(el)el.href=igUrl;});
+  ["fbHandle","footFbHandle"].forEach(id=>{const el=document.getElementById(id);if(el)el.textContent=FB_HANDLE;});
+  ["fbLink","footFb","heroFb","faqFb"].forEach(id=>{const el=document.getElementById(id);if(el)el.href=FB_URL;});
   ["phoneText","footPhoneText"].forEach(id=>{const el=document.getElementById(id);if(el)el.textContent=PHONE_DISPLAY;});
   document.getElementById("heroPhone").textContent = PHONE_DISPLAY;
   document.getElementById("faqPhone").textContent  = PHONE_DISPLAY;
@@ -1204,8 +1219,13 @@ function goToTab(id){
   document.querySelectorAll(".panel").forEach(p=>p.classList.remove("active"));
   document.querySelector(`[data-tab="${id}"]`)?.classList.add("active");
   document.getElementById(id)?.classList.add("active");
+  // Toggle body class so CSS can show hero only on Mission & Why tab
+  document.body.className = document.body.className.replace(/\btab-\w+/g, "").trim();
+  document.body.classList.add(`tab-${id}`);
   window.scrollTo({top:0,behavior:"smooth"});
 }
+// Set initial body class for default tab on page load
+document.body.classList.add("tab-why");
 document.querySelectorAll(".tab").forEach(btn=>{
   btn.addEventListener("click",()=>goToTab(btn.dataset.tab));
 });
@@ -1327,7 +1347,7 @@ function payCaptainFee(){
 /* --- share --- */
 async function sharePass(){
   const num  = document.getElementById("passNumber").textContent;
-  const text = `Locked in for Fort Worth Premium Basketball League tryouts on June 27 — Tryout #${num}. 25+ men's competitive league launching this summer. Reserve your spot ↓`;
+  const text = `Locked in for Fort Worth Premium Basketball League tryouts on July 25 — Tryout #${num}. 25+ men's competitive league launching this summer. Reserve your spot ↓`;
   const url  = location.href.split("?")[0];
   if(navigator.share){
     try{ await navigator.share({ title:"Fort Worth Premium Basketball League", text, url }); }catch(_){}
@@ -1468,7 +1488,7 @@ async function sharePass(){
     <img src="logo.jpg" alt="FWPBL" style="width:90px;height:90px;border-radius:50%;display:block;margin:0 auto 14px;box-shadow:0 4px 14px rgba(0,0,0,.4);border:1px solid rgba(201,169,97,.4)">
     <div class="welcome-eyebrow">— Welcome to FWPBL —</div>
     <h2>Fort Worth's Competitive Basketball League</h2>
-    <p>Inaugural season <b>Summer 2026</b>. Tryouts <b>June 27</b>. 8 teams, 64 spots, real refs, real runs.</p>
+    <p>Inaugural season <b>Summer 2026</b>. Tryouts <b>July 25</b>. 8 teams, 64 spots, real refs, real runs.</p>
     <p>Ready to lock in your spot? Hit <b>Tryout / Reg Form</b>. Want to learn the story first? Click through the tabs.</p>
     <div class="welcome-actions">
       <button class="welcome-btn primary" id="welcomeGo">Take Me To The Form →</button>
