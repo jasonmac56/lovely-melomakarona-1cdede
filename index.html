@@ -129,6 +129,33 @@
   @media(max-width:680px){.hero-call-strip{padding:18px 16px;letter-spacing:1px}}
 
   /* ==========================================================
+     FLOATING TRYOUT CTA — mobile only, always visible
+     ========================================================== */
+  .mobile-cta{display:none}
+  @media(max-width:680px){
+    .mobile-cta{
+      display:flex;align-items:center;justify-content:center;gap:8px;
+      position:fixed;bottom:14px;left:14px;right:14px;z-index:90;
+      background:var(--accent);color:#0b0d0c;
+      font-family:var(--display);font-size:16px;font-weight:800;letter-spacing:1px;text-transform:uppercase;
+      padding:15px 20px;border-radius:14px;border:none;cursor:pointer;
+      box-shadow:0 8px 24px rgba(0,0,0,.5),0 0 0 1px rgba(201,169,97,.4);
+      animation:ctaGlow 2.4s ease-in-out infinite
+    }
+    .mobile-cta::before{
+      content:"";width:9px;height:9px;border-radius:50%;background:#ff3d3d;
+      box-shadow:0 0 10px rgba(255,61,61,.8);animation:pulse 1.4s ease-in-out infinite
+    }
+    .mobile-cta:active{transform:translateY(1px)}
+    /* Add bottom padding to body so floating button doesn't cover footer content */
+    body{padding-bottom:80px}
+  }
+  @keyframes ctaGlow{
+    0%,100%{box-shadow:0 8px 24px rgba(0,0,0,.5),0 0 0 1px rgba(201,169,97,.4)}
+    50%{box-shadow:0 8px 28px rgba(0,0,0,.5),0 0 0 1px rgba(201,169,97,.7),0 0 24px rgba(201,169,97,.4)}
+  }
+
+  /* ==========================================================
      STICKY NAV — Option A: hero scrolls away, nav stays at top
      ========================================================== */
   header{position:sticky;top:0;z-index:50;background:rgba(11,13,12,.92);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
@@ -372,8 +399,12 @@
 
   @media(max-width:680px){
     .nav-inner{flex-direction:column;height:auto;padding:12px 0;gap:8px}
+  @media(max-width:680px){
     .tabs{justify-content:center}
     .tab{padding:9px 13px;font-size:12px;letter-spacing:.3px}
+    /* On mobile, push Tryout/Reg Form to the FRONT of the nav */
+    .tab.cta-soft{order:-1;width:100%;margin-bottom:4px;padding:12px 14px;font-size:13px}
+  }
     .contact-strip .wrap{justify-content:center;gap:14px}
     .hero{padding:36px 0 24px}
     .urgency{font-size:11px;gap:10px;padding:9px 14px}
@@ -1456,6 +1487,11 @@ async function sharePass(){
   <p><b>64 spots · 8 teams.</b> Lock yours in before tryouts close.</p>
   <button class="rb-go" id="bubbleGo">Lock In My Spot →</button>
 </div>
+
+<!-- Floating mobile-only CTA — always visible on phones -->
+<button class="mobile-cta" onclick="goToTab('tryouts'); setTimeout(()=>document.getElementById('regForm')?.scrollIntoView({behavior:'smooth',block:'start'}),100);">
+  Lock In My Spot — $10
+</button>
 
 </body>
 </html>
