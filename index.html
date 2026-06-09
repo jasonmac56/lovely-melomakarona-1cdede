@@ -4,11 +4,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Fort Worth Premium Basketball League — 25+ Men's Competitive Hoops</title>
-<meta name="description" content="A new 25+ competitive men's basketball league launching in Fort Worth. $10 tryout · $125 season. Tryouts July 25, 2026 at Chisholm Trail. Reserve your spot now.">
+<meta name="description" content="A new 25+ competitive men's basketball league launching in Fort Worth. $10 locks your spot · $125 season. Draft Day July 25, 2026 at Chisholm Trail. Reserve your spot now.">
 <link rel="icon" type="image/jpeg" href="logo.jpg">
 <link rel="apple-touch-icon" href="logo.jpg">
 <meta property="og:title" content="Fort Worth Premium Basketball League">
-<meta property="og:description" content="25+ men's competitive hoops in Fort Worth. Tryouts July 25, 2026. Reserve your spot for $10.">
+<meta property="og:description" content="25+ men's competitive hoops in Fort Worth. Draft Day July 25, 2026. Lock in your spot for $10.">
 <meta property="og:type" content="website">
 <meta property="og:image" content="https://fwpbl.com/logo.jpg">
 <meta property="og:url" content="https://fwpbl.com">
@@ -84,6 +84,8 @@
   .price-line{font-family:var(--display);font-size:clamp(22px,3.5vw,30px);margin:24px 0 6px;letter-spacing:.5px}
   .price-line b{color:var(--accent)}
   .price-sub{color:#ffffff;font-size:16px;font-family:var(--mono);letter-spacing:1.5px;text-shadow:0 2px 8px rgba(0,0,0,.85);font-weight:500}
+  .action-line{font-family:var(--display);font-size:clamp(24px,4vw,34px);letter-spacing:2px;text-transform:uppercase;color:var(--accent);margin-top:22px;text-shadow:0 2px 12px rgba(0,0,0,.8);line-height:1;font-weight:700}
+  .action-line span{color:var(--accent-2);padding:0 8px}
 
   .big-cta{display:inline-block;background:var(--accent);color:#0b0d0c;font-family:var(--display);font-size:26px;letter-spacing:1.5px;text-transform:uppercase;padding:20px 54px;border:none;border-radius:13px;cursor:pointer;margin-top:30px;transition:.2s;position:relative;overflow:hidden;box-shadow:0 6px 22px rgba(201,169,97,.22)}
   .big-cta:hover{transform:translateY(-3px);box-shadow:0 18px 38px rgba(201,169,97,.45)}
@@ -268,6 +270,11 @@
   .week-note{margin-top:14px;font-size:12px;color:var(--muted);font-family:var(--mono);letter-spacing:.5px}
 
   /* TRYOUTS */
+  .crew-banner{border:1.5px solid var(--accent);border-radius:14px;background:linear-gradient(135deg,rgba(201,169,97,.12),rgba(20,25,26,.5));padding:18px 24px;margin-bottom:26px;text-align:center}
+  .crew-banner-head{font-family:var(--display);font-size:24px;text-transform:uppercase;letter-spacing:.5px;color:var(--accent);line-height:1.05}
+  .crew-banner-body{font-size:15px;color:var(--text);margin-top:8px;line-height:1.5;max-width:680px;margin-left:auto;margin-right:auto}
+  .crew-banner-body b{color:var(--accent)}
+  .crew-banner-body .lime{color:var(--accent-2);font-weight:700}
   .tryout-hero{display:grid;grid-template-columns:1.35fr 1fr;gap:24px;margin-bottom:30px}
   @media(max-width:820px){.tryout-hero{grid-template-columns:1fr}}
   .spots-card{border:1px solid var(--line);border-radius:18px;padding:32px 28px;background:linear-gradient(140deg,var(--surface),var(--surface-2));text-align:center;display:flex;flex-direction:column;justify-content:center}
@@ -573,7 +580,7 @@
       <span class="nm"><span>FORT WORTH</span><small>Premium Basketball League</small></span>
     </div>
     <nav class="tabs">
-      <button class="tab cta-soft" data-tab="tryouts">Tryout / Reg Form</button>
+      <button class="tab cta-soft" data-tab="tryouts">Sign Up · Draft Day</button>
       <button class="tab active" data-tab="why">Mission &amp; Why</button>
       <button class="tab" data-tab="standings">Standings</button>
       <button class="tab" data-tab="fixtures">Games</button>
@@ -588,13 +595,13 @@
   <div class="wrap">
     <div class="eyebrow">— Inaugural Season · Summer 2026 —</div>
     <h1>FORT WORTH PREMIUM<span class="alt">BASKETBALL LEAGUE</span></h1>
-    <div class="tagline">Men's Competitive Basketball · 25+ Focus<small>18+ ballers welcome — if you can hoop, you can play</small></div>
+    <div class="tagline">If You Can Still Hoop — This Is Yours<small>25+ &amp; Up League · Open to 18+ if you can hoop</small></div>
 
     <div class="urgency">
       <span class="pulse"></span>
       <span>Only <b id="urgencySpots">64</b> spots</span>
       <span class="div"></span>
-      <span>Tryouts in <b id="urgencyDays">—</b></span>
+      <span>Draft Day in <b id="urgencyDays">—</b></span>
       <span class="filling-fast" id="fillingFast">FILLING FAST</span>
     </div>
 
@@ -602,8 +609,9 @@
       <span><b>8 teams</b> · <b>64 spots</b> · upside if demand hits</span>
     </div>
 
-    <div class="price-line"><b>$10</b> tryout · <b>$125</b> season</div>
+    <div class="price-line"><b>$10</b> locks your spot · <b>$125</b> season</div>
     <div class="price-sub">12-WEEK SEASON · REFS · JERSEYS · PLAYOFFS · TROPHIES</div>
+    <div class="action-line">Come Hoop <span>·</span> Get Drafted</div>
     <button class="big-cta" onclick="goToTab('tryouts')">Lock In My Spot — $10 →</button>
 
     <div class="hero-contact">
@@ -611,7 +619,7 @@
     </div>
 
     <div class="hero-meta">
-      <span>Tryouts <b>Sat Jul 25, 2026</b></span>
+      <span>Draft Day <b>Sat Jul 25, 2026</b></span>
       <span>Venue <b>Chisholm Trail Community Center</b></span>
       <span>Season starts <b>Early August</b></span>
     </div>
@@ -701,7 +709,7 @@
             <div class="step">
               <div class="step-num">1</div>
               <h3>Try Out</h3>
-              <p>Pay your <b>$10</b> and lock your tryout spot. Show up July 25 at Chisholm Trail, ball with the rest of the pool, get your game on tape.</p>
+              <p>Pay your <b>$10</b> and lock your spot in the league. Show up July 25 at Chisholm Trail, run with the rest of the players, and get drafted onto your team that same week.</p>
             </div>
             <div class="step">
               <div class="step-num">2</div>
@@ -723,15 +731,21 @@
   <!-- TRYOUTS -->
   <section class="panel" id="tryouts">
     <div class="wrap">
-      <div class="sec-head"><h2>Open Tryouts</h2><span>Register · pay · print pass</span></div>
+      <div class="sec-head"><h2>Draft Day Sign-Up</h2><span>Register · pay · print pass</span></div>
+
+      <div class="crew-banner">
+        <div class="crew-banner-head">Don't want to get split from your guys?</div>
+        <div class="crew-banner-body">Roll up as a <b>crew of up to 3</b> and you stay on the <span class="lime">same team</span>, guaranteed. Sign up solo and we draft you onto a balanced squad. Either way, everyone who locks in hoops — the draft just keeps teams fair, nobody gets cut.</div>
+      </div>
 
       <div class="tryout-hero">
         <div class="tryout-info">
-          <h3>Inaugural Tryout Day</h3>
+          <h3>Inaugural Draft Day</h3>
           <div class="info-row"><span class="lbl">When</span><span class="val">Sat Jul 25, 2026<small>11:00 AM – 1:00 PM</small></span></div>
           <div class="info-row"><span class="lbl">Where</span><span class="val">Chisholm Trail Community Center<small>Fort Worth, TX</small></span></div>
+          <div class="info-row"><span class="lbl">What</span><span class="val">Warm-ups · shooting drills · 5-on-5 full court runs · skill evaluation · team draft<small>Come ready to hoop — the day determines which team you're drafted to</small></span></div>
           <div class="info-row"><span class="lbl">Bring</span><span class="val">Athletic gear, both shoes, water<small>Reversibles provided at check-in</small></span></div>
-          <div class="info-row"><span class="lbl">Fee</span><span class="val">$10 tryout (non-refundable)<small>$125 season fee only if selected · due early August</small></span></div>
+          <div class="info-row"><span class="lbl">Fee</span><span class="val">$10 locks your spot (non-refundable)<small>$125 season fee only once teams are drafted · due early August</small></span></div>
         </div>
         <div class="spots-card">
           <div class="spots-num" id="spotsNum">64</div>
@@ -747,7 +761,7 @@
 
       <form class="reg-form" id="regForm" novalidate>
         <h3>Player Registration</h3>
-        <div class="sub">Fill it out, pay your $10, and your printable tryout pass appears instantly. Bring it on your phone or printed on tryout day.</div>
+        <div class="sub">Fill it out, pay your $10, and your printable draft day pass appears instantly. Bring it on your phone or printed on draft day.</div>
 
         <!-- Buddy pack selector -->
         <div class="buddy-card">
@@ -761,7 +775,7 @@
             <label class="buddy-opt">
               <input type="radio" name="registrationType" value="buddy">
               <span class="opt-title">Buddy Pack</span>
-              <span class="opt-sub">Up to 3 stay together at draft</span>
+              <span class="opt-sub">Up to 3 — stay on the same team</span>
             </label>
           </div>
 
@@ -771,12 +785,12 @@
               <label class="buddy-opt">
                 <input type="radio" name="buddyRole" value="captain">
                 <span class="opt-title">Captain</span>
-                <span class="opt-sub">You organize · $10 tryout + $20 group fee</span>
+                <span class="opt-sub">You organize · $10 entry + $20 group fee</span>
               </label>
               <label class="buddy-opt">
                 <input type="radio" name="buddyRole" value="player">
                 <span class="opt-title">Player</span>
-                <span class="opt-sub">Joining a captain's pack · $10 tryout</span>
+                <span class="opt-sub">Joining a captain's pack · $10 entry</span>
               </label>
             </div>
 
@@ -785,7 +799,7 @@
                 <div class="field"><label>Buddy 1 name</label><input name="buddy1Name" placeholder="Their full name"></div>
                 <div class="field"><label>Buddy 2 name (optional)</label><input name="buddy2Name" placeholder="Their full name"></div>
               </div>
-              <div class="buddy-note">After you pay your $10 tryout fee, your tryout pass will show a separate button to pay the <b>$20 captain group reservation fee</b>. Your buddies must register individually and list your name as their captain. Groups of 4+ will be split by the commissioner to balance team skill.</div>
+              <div class="buddy-note">After you pay your $10 entry fee, your draft day pass will show a separate button to pay the <b>$20 captain group reservation fee</b>. Your buddies must register individually and list your name as their captain. Groups of 4+ will be split by the commissioner to balance team skill.</div>
             </div>
 
             <div class="buddy-role" id="playerFields">
@@ -833,7 +847,7 @@
 
         <div class="waiver">
           <b>Release of Liability & Assumption of Risk</b>
-          <p>I, the undersigned participant, in consideration of being permitted to participate in tryouts, practices, scrimmages, games, and related activities of <span>Fort Worth Premium Basketball League</span> ("the League"), acknowledge, agree, and represent the following:</p>
+          <p>I, the undersigned participant, in consideration of being permitted to participate in draft day, practices, scrimmages, games, and related activities of <span>Fort Worth Premium Basketball League</span> ("the League"), acknowledge, agree, and represent the following:</p>
           <p><b style="display:inline;font-family:inherit;font-size:inherit">Assumption of risk.</b> I understand that basketball is a strenuous contact sport involving significant inherent risks of physical injury, including but not limited to: sprains, strains, fractures, concussions, dental injuries, ligament tears, contusions, heat-related illness, cardiac events, and in rare cases catastrophic or fatal injury. I voluntarily and knowingly assume all such risks, whether foreseen or unforeseen.</p>
           <p><b style="display:inline;font-family:inherit;font-size:inherit">Release.</b> I, on behalf of myself, my heirs, executors, and assigns, hereby RELEASE, WAIVE, DISCHARGE, AND COVENANT NOT TO SUE the League, its organizers, officers, employees, volunteers, referees, scorekeepers, sponsors, host venues including Chisholm Trail Community Center and any other facility used, and all other participants (collectively "Released Parties") from any and all liability, claims, demands, actions, and causes of action arising out of or related to any loss, damage, or injury sustained while participating in League activities, INCLUDING SUCH CLAIMS BASED IN WHOLE OR IN PART ON THE NEGLIGENCE OF THE RELEASED PARTIES.</p>
           <p><b style="display:inline;font-family:inherit;font-size:inherit">Indemnification.</b> I agree to INDEMNIFY AND HOLD HARMLESS the Released Parties from any loss, liability, damage, or cost they may incur arising out of my participation.</p>
@@ -844,7 +858,7 @@
         <label class="waiver-check"><input type="checkbox" name="waiver" required> I have read, understood, and agree to the Release of Liability above. I am 18 or older and physically fit to participate.</label>
 
         <div class="form-foot">
-          <div class="fee-tag"><b>$10</b> tryout fee<small>Non-refundable · $125 season only if selected</small></div>
+          <div class="fee-tag"><b>$10</b> entry fee<small>Non-refundable · $125 season only once teams are drafted</small></div>
           <button type="submit" class="pay-btn" id="payBtn">Pay $10 &amp; Get My Pass →</button>
         </div>
         <div class="form-err" id="formErr"></div>
@@ -853,10 +867,10 @@
       <div class="faq">
         <h3>Frequently Asked</h3>
         <details class="qa"><summary>What does the $125 season fee cover?</summary><div class="ans">Refs for every regular-season and playoff game, league insurance, gym rental at Chisholm Trail and other Fort Worth venues, two reversible jerseys, game balls, scorekeeping, end-of-season trophies for champions and MVP, and a fund for league growth into year two. Twelve-week season.</div></details>
-        <details class="qa"><summary>What if I don't make the cut after tryouts?</summary><div class="ans">If you aren't selected, your $10 tryout fee covers your participation in the open run and is non-refundable. You will not be charged the $125 season fee. We'll also connect you with other Fort Worth leagues we know of that might be a better skill fit.</div></details>
-        <details class="qa"><summary>Are refunds available?</summary><div class="ans">The $10 tryout fee is non-refundable. The $125 season fee is refundable up to the first regular season game; after the first game, it is non-refundable. If the league cancels the season for any reason, season fees are fully refunded.</div></details>
+        <details class="qa"><summary>Am I guaranteed to make a team?</summary><div class="ans">If you pay your $10 entry and show up on Draft Day, you're on a team. We balance teams across skill and buddy packs — the day determines which team you're drafted to, not whether you play. The only exception: if more than 64 people register, the rest go on a waitlist (you'd be refunded or rolled to a second draft day if demand is strong enough). Everyone inside the 64 is in.</div></details>
+        <details class="qa"><summary>Are refunds available?</summary><div class="ans">The $10 entry fee is non-refundable once you're locked in. The $125 season fee is refundable up to the first regular season game; after the first game, it is non-refundable. If the league cancels the season for any reason, all season fees are fully refunded. If you register and end up on the waitlist (more than 64 sign up before you), your $10 is fully refunded.</div></details>
         <details class="qa"><summary>Who can play? Age limits?</summary><div class="ans">You must be 18 or older to participate. Our focus is 25+ players, but skilled 18–24 year olds are welcome to try out and earn a roster spot. Skill level is intermediate or advanced — this is a competitive league.</div></details>
-        <details class="qa"><summary>When does the season start and end?</summary><div class="ans">Tryouts: Saturday, July 25, 2026. Teams formed and announced the following week. Regular season tips off early August and runs 12 weeks through early October, followed by a single-elimination playoff bracket.</div></details>
+        <details class="qa"><summary>When does the season start and end?</summary><div class="ans">Draft Day: Saturday, July 25, 2026. Teams formed and announced the following week. Regular season tips off early August and runs 12 weeks through early October, followed by a single-elimination playoff bracket.</div></details>
         <details class="qa"><summary>Where are games played?</summary><div class="ans">Primary venue is Chisholm Trail Community Center. Some weeks games may rotate to other Fort Worth rec centers depending on court availability. Schedule will be posted here before the season starts.</div></details>
         <details class="qa"><summary>How do I contact the league?</summary><div class="ans">Message us on <a id="faqFb" href="https://www.facebook.com/fwpblofficial" target="_blank" rel="noopener">Facebook</a>, text or call <a id="faqPhone" href="tel:+16823821794">(682) 382-1794</a>, or email <a id="faqEmail" href="mailto:contact@fwpbl.com">contact@fwpbl.com</a>. We typically respond within 24 hours.</div></details>
       </div>
@@ -914,7 +928,7 @@
             <div class="day game"><div class="d">Sat</div><div class="g">2</div></div>
             <div class="day"><div class="d">Sun</div><div class="g">—</div></div>
           </div>
-          <div class="week-note">Sample week — exact game nights confirmed after tryouts based on venue availability and player schedules.</div>
+          <div class="week-note">Sample week — exact game nights confirmed after draft day based on venue availability and player schedules.</div>
         </div>
 
         <div class="info-block">
@@ -946,7 +960,7 @@
         <div class="info-block">
           <div class="sub">Team formation</div>
           <h3>How rosters get built</h3>
-          <p>Eight teams to start. Rosters are drafted from the tryout pool in the week after tryouts close. Captains are selected by league organizers based on tryout performance — you'll know who's wearing the C before opening night.</p>
+          <p>Eight teams to start. Rosters are drafted from the player pool the week after draft day. Captains are selected by league organizers based on draft day performance — you'll know who's wearing the C before opening night.</p>
           <ul>
             <li><b>8 teams</b> · 8 players per roster</li>
             <li>Balanced draft for competitive parity (no stacked teams)</li>
@@ -971,8 +985,8 @@
           <h3>Demand keeps coming? We grow.</h3>
           <p>Eight teams and 64 player slots is the baseline. If we fill up and the waitlist keeps building, we open expansion before the season starts:</p>
           <ul>
-            <li>Waitlist opens automatically once the 64 tryout spots are claimed</li>
-            <li>A strong waitlist triggers a <b>second tryout day</b> to round out the league</li>
+            <li>Waitlist opens automatically once the 64 roster spots are claimed</li>
+            <li>A strong waitlist triggers a <b>second draft day</b> to round out the league</li>
             <li>Upside if demand really hits — more players on the 8 teams, and the door is open for additional teams</li>
             <li>Any updates announced here and on Instagram</li>
           </ul>
@@ -1120,16 +1134,16 @@
   </div>
 </div></footer>
 
-<!-- TRYOUT PASS OVERLAY -->
+<!-- DRAFT DAY PASS OVERLAY -->
 <div class="pass-overlay" id="passOverlay">
   <div class="pass-wrap">
     <div class="pass-card" id="passCard">
       <div class="pass-top">
         <div class="lg"><span class="crest">F</span><span>FORT WORTH PREMIUM BASKETBALL LEAGUE</span></div>
-        <div class="ttl">TRYOUT PASS</div>
+        <div class="ttl">DRAFT DAY PASS</div>
       </div>
       <div class="pass-num">
-        <div class="lbl">Your tryout number</div>
+        <div class="lbl">Your roster number</div>
         <div class="nm" id="passNumber">—</div>
         <div class="pid" id="passId">TRY-2026-XXX</div>
       </div>
@@ -1144,7 +1158,7 @@
         </div>
         <div class="pass-qr">
           <div id="qrTarget"></div>
-          <div class="qr-meta"><b>SCAN AT CHECK-IN</b>Bring on your phone<br>or print before tryout day.</div>
+          <div class="qr-meta"><b>SCAN AT CHECK-IN</b>Bring on your phone<br>or print before draft day.</div>
         </div>
       </div>
     </div>
@@ -1208,7 +1222,7 @@ function updateCountdown(){
   if(days > 1) el.textContent = days + " days";
   else if(days === 1) el.textContent = "1 day";
   else if(days === 0) el.textContent = "TODAY";
-  else el.textContent = "tryouts complete";
+  else el.textContent = "draft day complete";
 }
 updateCountdown();
 setInterval(updateCountdown, 60*60*1000); // refresh hourly
@@ -1237,7 +1251,7 @@ function updateSpots(){
   document.getElementById("spotsBar").style.width = `${((SPOTS_TOTAL-spotsRemaining)/SPOTS_TOTAL)*100}%`;
   document.getElementById("spotsFoot").textContent = spotsRemaining > 0
     ? `of ${SPOTS_TOTAL} total · payments stop when full · waitlist auto-opens`
-    : `Tryout cap reached · payments paused · join the live waitlist below`;
+    : `League full · payments paused · join the live waitlist below`;
   // Filling Fast badge appears once under 15 spots
   const fillFast = document.getElementById("fillingFast");
   if(fillFast) fillFast.classList.toggle("show", spotsRemaining < 16 && spotsRemaining > 0);
@@ -1289,7 +1303,7 @@ document.getElementById("regForm").addEventListener("submit", async (e)=>{
         method:"POST",
         headers:{"Content-Type":"application/json","Accept":"application/json"},
         body: JSON.stringify({
-          _subject: `New FWPBL Tryout Registration #${padded} — ${data.firstName} ${data.lastName}`,
+          _subject: `New FWPBL Draft Day Registration #${padded} — ${data.firstName} ${data.lastName}`,
           ...data,
           tryoutNumber: padded,
           tryoutId: pid
@@ -1347,7 +1361,7 @@ function payCaptainFee(){
 /* --- share --- */
 async function sharePass(){
   const num  = document.getElementById("passNumber").textContent;
-  const text = `Locked in for Fort Worth Premium Basketball League tryouts on July 25 — Tryout #${num}. 25+ men's competitive league launching this summer. Reserve your spot ↓`;
+  const text = `Locked in for Fort Worth Premium Basketball League · Draft Day July 25 — Roster #${num}. 25+ men's competitive league, 18+ welcome if you can hoop. Lock in your spot ↓`;
   const url  = location.href.split("?")[0];
   if(navigator.share){
     try{ await navigator.share({ title:"Fort Worth Premium Basketball League", text, url }); }catch(_){}
@@ -1488,8 +1502,8 @@ async function sharePass(){
     <img src="logo.jpg" alt="FWPBL" style="width:90px;height:90px;border-radius:50%;display:block;margin:0 auto 14px;box-shadow:0 4px 14px rgba(0,0,0,.4);border:1px solid rgba(201,169,97,.4)">
     <div class="welcome-eyebrow">— Welcome to FWPBL —</div>
     <h2>Fort Worth's Competitive Basketball League</h2>
-    <p>Inaugural season <b>Summer 2026</b>. Tryouts <b>July 25</b>. 8 teams, 64 spots, real refs, real runs.</p>
-    <p>Ready to lock in your spot? Hit <b>Tryout / Reg Form</b>. Want to learn the story first? Click through the tabs.</p>
+    <p>Inaugural season <b>Summer 2026</b>. Draft Day <b>July 25</b>. 8 teams, 64 roster spots, real refs, real runs.</p>
+    <p>Ready to lock in your spot? Hit <b>Sign Up · Draft Day</b>. Want to learn the story first? Click through the tabs.</p>
     <div class="welcome-actions">
       <button class="welcome-btn primary" id="welcomeGo">Take Me To The Form →</button>
       <button class="welcome-btn ghost" id="welcomeBrowse">Let Me Browse First</button>
@@ -1504,7 +1518,7 @@ async function sharePass(){
     <span class="rb-dot"></span>
     <span class="rb-title">Spots are limited</span>
   </div>
-  <p><b>64 spots · 8 teams.</b> Lock yours in before tryouts close.</p>
+  <p><b>64 spots · 8 teams.</b> Lock yours in before draft day.</p>
   <button class="rb-go" id="bubbleGo">Lock In My Spot →</button>
 </div>
 
